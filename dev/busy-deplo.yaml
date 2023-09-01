@@ -15,6 +15,9 @@ spec:
       containers:
       - name: busybox
         image: busybox:1.36
+        args:
+        - sleep
+        - "1000"
         resources:
           limits:
             memory: "128Mi"
