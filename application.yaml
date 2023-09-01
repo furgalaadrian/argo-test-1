@@ -1,4 +1,4 @@
-apiVersion: argoproj.io/v1alpha1
+apiVersion: argoproj.io/v2.8
 kind: Application
 metadata:
   name: myapp-argo-application
@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
 source:
-  repoURL: https://github.com/furgalaadrian/argo-test-1.git
+  repoURL: https://github.com/furgalaadrian/argo-test-1
   targetRevision: HEAD
   path: dev
 destination:
