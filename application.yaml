@@ -10,5 +10,15 @@ source:
   targetRevision: HEAD
   path: dev
 destination:
-  server: https://kubernetes.deafault.svc
+  server: https://kubernetes.default.svc
+  namespace: myapp
 
+syncPolicy:
+  syncOptions:
+    - CreateNamespace=true
+
+  automated:
+    #automatycznie ustawia stan taki jak jest w repo, domyślnie te opcje mają ustwaione false
+    #selfHeal pozwala tworzyć nowe prune usuwać nie potrzebne i zminieać nazwy
+    selfHeal: true
+    prune: true
